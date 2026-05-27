@@ -2,7 +2,7 @@
   "pluginAlias": "ttlock",
   "pluginType": "platform",
   "singular": true,
-  "headerDisplay": "## TTLock Platform Improved for Homebridge\n\n**Important:** For setup instructions, please see the project [GitHub Page](https://github.com/itsJumaah/homebridge-ttlock).",
+  "headerDisplay": "## TTLock Platform v2026 for Homebridge\n\n**Important:** For setup instructions, please see the project [GitHub Page](https://github.com/itsJumaah/homebridge-ttlock-v2026).",
 
   "schema": {
     "type": "object",
