@@ -12,7 +12,7 @@
 
 
 
-# Homebridge TTLock Plugin 
+# Homebridge TTLock Improved Plugin
 
 
 
@@ -21,11 +21,10 @@ plugin that allows you to access your TTLock Device(s) from HomeKit with
   <a href="https://homebridge.io">Homebridge</a>. 
 </p>
 
-[![verified-by-homebridge](https://badgen.net/badge/homebridge/verified/purple)](https://github.com/homebridge/homebridge/wiki/Verified-Plugins)
-[![github checks](https://badgen.net/github/checks/bwitting/homebridge-ttlock?icon=github&label=checks)](https://github.com/bwitting/homebridge-ttlock)
-[![github release](https://badgen.net/github/release/bwitting/homebridge-ttlock?icon=github&label=release)](https://github.com/bwitting/homebridge-ttlock)
-[![npm version](https://badgen.net/npm/v/homebridge-ttlock?icon=npm&label=version)](https://www.npmjs.com/package/homebridge-ttlock)
-[![npm downloads](https://badgen.net/npm/dt/homebridge-ttlock?icon=npm&label=downloads)](https://www.npmjs.com/package/homebridge-ttlock)
+[![github checks](https://badgen.net/github/checks/itsJumaah/homebridge-ttlock?icon=github&label=checks)](https://github.com/itsJumaah/homebridge-ttlock)
+[![github release](https://badgen.net/github/release/itsJumaah/homebridge-ttlock?icon=github&label=release)](https://github.com/itsJumaah/homebridge-ttlock)
+[![npm version](https://badgen.net/npm/v/homebridge-ttlock-improved?icon=npm&label=version)](https://www.npmjs.com/package/homebridge-ttlock-improved)
+[![npm downloads](https://badgen.net/npm/dt/homebridge-ttlock-improved?icon=npm&label=downloads)](https://www.npmjs.com/package/homebridge-ttlock-improved)
 
 
 </span>
@@ -79,7 +78,7 @@ curl --location --request POST 'https://euapi.ttlock.com/v3/user/register?client
 
 Or install the plugin with the following command:
 ```
-npm install -g homebridge-ttlock
+npm install -g homebridge-ttlock-improved
 ```
 <br><br>
 

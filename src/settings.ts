@@ -6,4 +6,4 @@ export const PLATFORM_NAME = 'ttlock';
 /**
  * This must match the name of your plugin as defined the package.json
  */
-export const PLUGIN_NAME = 'homebridge-ttlock';
+export const PLUGIN_NAME = 'homebridge-ttlock-improved';
