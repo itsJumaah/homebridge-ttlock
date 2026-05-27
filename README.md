@@ -120,8 +120,3 @@ npm install -g homebridge-ttlock
 * Homekit will show warning when lock has low battery (customize in plugin configuration) 
 
 <br><br>
-
-# Planned Backlog
-
-* Better handle condition when gateway is busy
-* Expose each lock to config and allow more customization
