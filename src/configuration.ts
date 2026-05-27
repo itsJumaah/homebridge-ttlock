@@ -32,6 +32,36 @@ export interface Configuration {
     maximumApiRetry: number;
 
     /**
+     * Gets or sets the cache duration for lock state reads in seconds.
+     */
+    stateCacheSeconds?: number;
+
+    /**
+     * Gets or sets the cache duration for battery reads in minutes.
+     */
+    batteryCacheMinutes?: number;
+
+    /**
+     * Gets or sets the timeout for TTLock read/token API calls in seconds.
+     */
+    apiTimeoutSeconds?: number;
+
+    /**
+     * Gets or sets the timeout for TTLock lock/unlock commands in seconds.
+     */
+    commandTimeoutSeconds?: number;
+
+    /**
+     * Gets or sets the delay before confirming lock state after a command in seconds.
+     */
+    commandConfirmDelaySeconds?: number;
+
+    /**
+     * Gets or sets the gateway busy backoff duration in seconds.
+     */
+    gatewayBusyBackoffSeconds?: number;
+
+    /**
      * Gets or sets the interval between retries in milliseconds.
      */
     apiRetryInterval: number;

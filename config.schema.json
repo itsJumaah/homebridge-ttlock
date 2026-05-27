@@ -53,6 +53,54 @@
         "default": 5,
         "placeholder": 5,
         "description": "The amount of attempts to call the TTLock API. Useful if you do not want to repeat failed lock/unlock attempts after a long timeout delay."
+      },
+      "stateCacheSeconds": {
+        "title": "Lock state cache duration",
+        "type": "integer",
+        "default": 10,
+        "minimum": 0,
+        "maximum": 300,
+        "description": "How long to reuse the last lock state before calling TTLock again. Use 0 to disable state caching."
+      },
+      "batteryCacheMinutes": {
+        "title": "Battery cache duration",
+        "type": "integer",
+        "default": 30,
+        "minimum": 1,
+        "maximum": 1440,
+        "description": "How long to reuse the last battery level before calling TTLock again."
+      },
+      "apiTimeoutSeconds": {
+        "title": "API read timeout",
+        "type": "integer",
+        "default": 8,
+        "minimum": 1,
+        "maximum": 60,
+        "description": "Timeout for TTLock state, battery, token, and discovery API calls."
+      },
+      "commandTimeoutSeconds": {
+        "title": "Lock command timeout",
+        "type": "integer",
+        "default": 10,
+        "minimum": 1,
+        "maximum": 60,
+        "description": "Timeout for TTLock lock and unlock commands."
+      },
+      "commandConfirmDelaySeconds": {
+        "title": "Command confirmation delay",
+        "type": "integer",
+        "default": 3,
+        "minimum": 0,
+        "maximum": 60,
+        "description": "How long to wait after a successful lock/unlock command before confirming the real lock state. Use 0 to disable confirmation."
+      },
+      "gatewayBusyBackoffSeconds": {
+        "title": "Gateway busy backoff",
+        "type": "integer",
+        "default": 15,
+        "minimum": 0,
+        "maximum": 300,
+        "description": "How long to pause new lock/unlock commands after TTLock reports the gateway is busy."
       }
     }
   },
@@ -69,7 +117,13 @@
       "description": "",
       "items": [
         "batteryLowLevel",
-        "maximumApiRetry"
+        "maximumApiRetry",
+        "stateCacheSeconds",
+        "batteryCacheMinutes",
+        "apiTimeoutSeconds",
+        "commandTimeoutSeconds",
+        "commandConfirmDelaySeconds",
+        "gatewayBusyBackoffSeconds"
       ]
     }
   ]

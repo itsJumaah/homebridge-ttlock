@@ -84,7 +84,7 @@ export class TtlockApiClient {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
-        timeout: 8000,
+        timeout: this.getApiTimeoutMs(),
       });
 
       // Stores the access token.
@@ -104,5 +104,16 @@ export class TtlockApiClient {
 
       return await this.requestAccessTokenAsync(retriesRemaining - 1);
     }
+  }
+
+  private getApiTimeoutMs(): number {
+    const config = this.platform.config as Record<string, unknown>;
+    const value = Number(config.apiTimeoutSeconds);
+
+    if (!Number.isFinite(value)) {
+      return 8000;
+    }
+
+    return Math.max(1, Math.min(60, value)) * 1000;
   }
 }

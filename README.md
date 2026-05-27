@@ -82,6 +82,13 @@ npm install -g homebridge-ttlock-v2026
 ```
 <br><br>
 
+## Migration from other TTLock packages
+
+If you are moving from `homebridge-ttlock` or `homebridge-ttlock-improved`, uninstall the old package first so Homebridge
+does not load two plugins with the same `ttlock` platform alias. Your Homebridge config can keep `"platform": "ttlock"`.
+
+<br><br>
+
 ## Configuration
 ```
         {
@@ -110,12 +117,24 @@ npm install -g homebridge-ttlock-v2026
 
 **maximumApiRetry**: Maximum times to retry hitting the API.
 
+**stateCacheSeconds**: How long to reuse the last lock state before calling TTLock again.
+
+**batteryCacheMinutes**: How long to reuse the last battery level before calling TTLock again.
+
+**apiTimeoutSeconds**: Timeout for TTLock state, battery, token, and discovery API calls.
+
+**commandTimeoutSeconds**: Timeout for TTLock lock and unlock commands.
+
+**commandConfirmDelaySeconds**: How long to wait after a successful lock/unlock command before confirming the real lock state.
+
+**gatewayBusyBackoffSeconds**: How long to pause lock/unlock commands after TTLock reports the gateway is busy.
+
 <br><br>
 
 # Usage
 
 * On Homebridge load, plugin will get all locks from TTLock account and add them to Homebridge (if they are not already cached)
 * Use Homekit to lock and unlock your locks!
-* Homekit will show warning when lock has low battery (customize in plugin configuration) 
+* Homekit will show the lock battery through a dedicated Battery service and warn when the lock has low battery
 
 <br><br>
